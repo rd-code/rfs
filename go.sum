@@ -1,0 +1,11 @@
+github.com/lib/pq v1.0.0 h1:X5PMW56eZitiTeO7tKzZxFCSpbFZJtkMMooicw2us9A=
+github.com/lib/pq v1.0.0/go.mod h1:5WUZQaWbwv1U+lTReE5YruASi9Al49XbQIvNi/34Woo=
+github.com/rd-code/common v0.0.0-20180704095417-6a76b2cc854a h1:bfhSd18ROULBSQWd1bgjb8mgn6PHtVXbLo+9pyVYpo0=
+github.com/rd-code/common v0.0.0-20180704095417-6a76b2cc854a/go.mod h1:SBlgpP2aEZ9mxhRTppSrVUHTa5edpkDZuA8xN/LdZtc=
+github.com/rd-code/common v0.0.0-20181111115959-fce71cb67749 h1:alwOtKrEEx+E8YvFtdEB6kj2a92oKOD1h6XPuWt7718=
+github.com/rd-code/common v0.0.0-20181111115959-fce71cb67749/go.mod h1:SBlgpP2aEZ9mxhRTppSrVUHTa5edpkDZuA8xN/LdZtc=
+github.com/rd-code/common v0.1.0 h1:6rKWUSJs4VAP3RTaCsWP6uXtPhj88BfrDWqO3ltxbtg=
+github.com/rd-code/common v0.1.0/go.mod h1:SBlgpP2aEZ9mxhRTppSrVUHTa5edpkDZuA8xN/LdZtc=
+gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405/go.mod h1:Co6ibVJAznAaIkqp8huTwlJQCZ016jof/cbN4VW5Yz0=
+gopkg.in/yaml.v2 v2.2.1 h1:mUhvW9EsL+naU5Q3cakzfE91YhliOondGd6ZrsDBHQE=
+gopkg.in/yaml.v2 v2.2.1/go.mod h1:hI93XBmqTisBFMUTm0b8Fm+jr3Dg1NNxqwp+5A1VGuI=
