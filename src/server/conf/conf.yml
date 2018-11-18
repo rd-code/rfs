@@ -1,0 +1,10 @@
+db:
+  host: 127.0.0.1
+  port: 5432
+  user: rd
+  password: 5blmXxx,bjcjGgl
+  database: api_server
+listen:
+  addr: 0.0.0.0:8888
+file:
+  path: /Users/rd/go/rfs/fs
