@@ -13,10 +13,10 @@ import (
  * @create 2018-11-11 23:14
  **/
 
-var host = flag.String("h", "127.0.0.1", "host")
-var port = flag.Int("p", 5555, "port")
-var account = flag.String("u", "", "user")
-var passwrod = flag.String("a", "", "password")
+var host = flag.String("h", "47.105.163.97", "host")
+var port = flag.Int("p", 8888, "port")
+var account = flag.String("u", "god", "user")
+var passwrod = flag.String("a", "123321", "password")
 
 func main() {
     flag.Parse()

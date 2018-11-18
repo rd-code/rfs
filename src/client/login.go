@@ -17,7 +17,7 @@ import (
  **/
 
 func login(account, pass string, conn net.Conn) (bool, error) {
-    body := fmt.Sprintf("%s;%d", account, pass)
+    body := fmt.Sprintf("%s;%s", account, pass)
     header := &protocol.Header{
         Version: protocol.VERSION_0,
         Type:    protocol.TYPE_COMMON,
