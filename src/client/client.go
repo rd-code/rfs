@@ -47,9 +47,7 @@ func (c *Client) accept() error {
         if len(value) == 0 {
             continue
         }
-        fmt.Println(len(value), value[0], len(value[0]), value[0] == "ls\n")
         if len(value) == 1 && value[0] == "ls" {
-            fmt.Println("-----")
             ls(c)
         }
 

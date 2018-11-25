@@ -4,8 +4,10 @@ import (
     "bytes"
     "errors"
     "fmt"
+    "github.com/rd-code/common/filter"
     "io"
     "rfs/src/protocol"
+    "strings"
 )
 
 /**
@@ -16,7 +18,6 @@ import (
  **/
 
 func ls(cli *Client) (err error) {
-    fmt.Println("-----")
     header := &protocol.Header{
         Version: protocol.VERSION_0,
         Type:    protocol.TYPE_COMMON,
@@ -41,8 +42,16 @@ func ls(cli *Client) (err error) {
     if header.Type == protocol.TYPE_ERR {
         return errors.New(buffer.String())
     }
-    fmt.Println("==========")
-    fmt.Println(cli.prefix, buffer.String())
+    if buffer.Len() == 0 {
+        return
+    }
+    items := strings.Split(buffer.String(), "\n")
+    var args []interface{}
+    filter.Map(items, &args, func(index int) interface{} {
+        return items[index]
+    })
+
+    fmt.Println(args...)
 
     return
 }

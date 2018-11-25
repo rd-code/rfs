@@ -68,6 +68,8 @@ func (s *Server) do(h *protocol.Header) (error) {
         return s.auth(h)
     case protocol.CTL_LS:
         return ls(s, h)
+    case protocol.CTL_UP:
+        return up(s, h)
     }
     return nil
 }
