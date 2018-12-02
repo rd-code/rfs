@@ -25,7 +25,8 @@ func main() {
         fmt.Println("create connection failed", err)
         return
     }
-    defer conn.Close()
+    defer conn.Close() //关闭链接
+
     var client *Client
     if client, err = NewClient(*account, *passwrod, conn); err != nil {
         fmt.Println("create client failed", err)
