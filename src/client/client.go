@@ -49,6 +49,8 @@ func (c *Client) accept() error {
         }
         if len(value) == 1 && value[0] == "ls" {
             ls(c)
+        } else if len(value) == 2 && value[0] == "up" {
+            up(c, value[1])
         }
 
     }
