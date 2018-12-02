@@ -53,6 +53,8 @@ func (c *Client) accept() error {
             err = up(c, value[1])
         } else if len(value) == 2 && value[0] == "down" {
             err = down(c, value[1])
+        } else if len(value) ==1 && value[0] == "exit" {
+            return nil
         }
         if err != nil {
             fmt.Println("parse failed", err)
