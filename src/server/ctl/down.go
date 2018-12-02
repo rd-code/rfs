@@ -28,11 +28,11 @@ func down(server *Server, header *protocol.Header) error {
     }
 
     buffer := &bytes.Buffer{}
-    if _, err := io.CopyN(buffer, server.conn, resHeader.Size); err != nil {
+    if _, err := io.CopyN(buffer, server.conn, header.Size); err != nil {
         body := []byte(err.Error())
         resHeader.Type = protocol.TYPE_ERR
         resHeader.Size = int64(len(body))
-        if err := resp(server.conn, header, body); err != nil {
+        if err := resp(server.conn, resHeader, body); err != nil {
             fmt.Println("ersp failed", err)
         }
         return err
@@ -45,7 +45,7 @@ func down(server *Server, header *protocol.Header) error {
         body := []byte(err.Error())
         resHeader.Type = protocol.TYPE_ERR
         resHeader.Size = int64(len(body))
-        if err := resp(server.conn, header, body); err != nil {
+        if err := resp(server.conn, resHeader, body); err != nil {
             fmt.Println("ersp failed", err)
         }
         return err
@@ -57,7 +57,7 @@ func down(server *Server, header *protocol.Header) error {
         body := []byte(err.Error())
         resHeader.Type = protocol.TYPE_ERR
         resHeader.Size = int64(len(body))
-        if err := resp(server.conn, header, body); err != nil {
+        if err := resp(server.conn, resHeader, body); err != nil {
             fmt.Println("ersp failed", err)
         }
         return err
@@ -68,7 +68,7 @@ func down(server *Server, header *protocol.Header) error {
         body := []byte(err.Error())
         resHeader.Type = protocol.TYPE_ERR
         resHeader.Size = int64(len(body))
-        if err := resp(server.conn, header, body); err != nil {
+        if err := resp(server.conn, resHeader, body); err != nil {
             fmt.Println("ersp failed", err)
         }
         return err
