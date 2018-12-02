@@ -6,6 +6,7 @@ import (
     "fmt"
     "io"
     "os"
+    "path/filepath"
     "rfs/src/protocol"
 )
 
@@ -38,6 +39,7 @@ func down(server *Server, header *protocol.Header) error {
     }
 
     path := buffer.String()
+    path = filepath.Join(server.workDir, path)
     file, err := os.Open(path)
     if err != nil {
         body := []byte(err.Error())
