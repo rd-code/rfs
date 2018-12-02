@@ -70,6 +70,8 @@ func (s *Server) do(h *protocol.Header) (error) {
         return ls(s, h)
     case protocol.CTL_UP:
         return up(s, h)
+    case protocol.CTL_DOWN:
+        return down(s, h)
     }
     return nil
 }
